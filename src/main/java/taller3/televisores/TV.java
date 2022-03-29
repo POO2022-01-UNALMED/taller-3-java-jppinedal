@@ -19,95 +19,96 @@ public class TV {
 		numTV++;
 	}
 	
-	public Marca getMarca() {
+	public Marca getMarca() { //
 		return marca;
 		
 	}
 	
-	public void setMarca(Marca marca) {
+	public void setMarca(Marca marca) {//
 		this.marca = marca;
 	}
 	
-	public Control getContro() {
+	public Control getContro() {//
 		return control;	
 	}
 	
-	public void setControl(Control control) {
+	public void setControl(Control control) {//
 		this.control = control;
 	}
 	
-	public int getPrecio() {
+	public int getPrecio() {//
 		return precio;
 	}
 	
-	public void setPrecio(int precio) {
+	public void setPrecio(int precio) {//
 		this.precio = precio;
 	}
 	
-	public int getVolumen() {
+	public int getVolumen() {//
 		return volumen;
 	}
 	
-	public void setVolumen(int volumen) {
-		if(estado == true && volumen <= 7 && volumen >= 0) {
+	public void setVolumen(int volumen) {//
+		if(estado == true && volumen <= 7 && volumen >= 1) {
 			this.volumen = volumen;
 		}
 	}
 	
-	public int volumenUp() {
-		if (estado == true && volumen >= 1 && volumen < 7) {
+	public int volumenUp() {//
+		if (estado == true && (volumen >= 1 && volumen < 7)) {
 			volumen++;
 		}
 		return volumen;
 	}
 	
-	public int volumenDown() {
-		if(estado == true && volumen > 1 && volumen <= 7) {
+	public int volumenDown() {//
+		if(estado == true && (volumen > 1 && volumen <= 7)) {
 			volumen--;
 		}
 		return volumen;
 	}
 	
-	public int getCanal() {
+	public int getCanal() {//
 		return canal;
 	}
 	
-	public void setCanal(int canal) {
-		if(estado == true && canal <=120 && canal >= 1) {
+	public void setCanal(int canal) {//
+		if(estado == true && (canal <=120 && canal >= 1)) {
 			this.canal = canal;
 		}
 	}
 	
-	public int canalUp() {
-		if(estado == true && canal < 120 && canal >= 1) {
+	public int canalUp() {//
+		if(estado == true && (canal < 120 && canal >= 1)) {
 			canal++;
 		}
 		return canal;
 	}
 	
-	public int canalDown() {
-		if(estado == true && canal>1 && canal <=120) {
+	public int canalDown() {//
+		if(estado == true && (canal>1 && canal <=120)) {
 			canal--;
 		}
 		return canal;
 	}
 	
-	public static int getNumTV() {
+	public static int getNumTV() {//
 		return numTV;
 	}
 	
-	public static void setNumTV(int numTV) {
+	public static void setNumTV(int numTV) {//
 		TV.numTV = numTV;
 	}
 	
-	public void turnOn() {
+	public void turnOn() {//
 		this.estado = true;
 	}
 	
-	public void turnOff() {
+	public void turnOff() {//
 		this.estado = false;
 	}
-	public boolean getEstado() {
+	
+	public boolean getEstado() {//
 		return estado;
 	}
 	
